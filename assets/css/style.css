@@ -23,15 +23,21 @@ body {
 .content {  /*egészt tartalmazó div*/
     display: flex;
     width: 100vw;
-    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+@media screen and (min-width: 900px) {
+    .content { 
+        height: 100vh;
+    }
+}
+
 .content__text {  /*szöveg rész*/
     color: var(--brown);
     text-align: center;
+    font-size: 1rem;
 }
 .gameTimer {  /*óra*/
     font-size: 2rem;
@@ -49,8 +55,15 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 55%;
+    width: 100vw;
 }
+
+@media screen and (min-width: 900px) {
+    .content__cards--row { 
+        width: 40rem;
+    }
+}
+
 .card {   /*kártya oldalak összefogója*/
     border: 1px solid var(--brown);
     border-radius: 5px;
